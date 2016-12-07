@@ -7,5 +7,6 @@ script_dir=`dirname $script_path`
 cd $script_dir
 cd ../runtime
 sed -e "s|###IP_ADDRESS###|$ip_addr|" request.json.tmpl > request.json
+sed -i -e "s|###FQDN###|$3|" request.json
 
 aws route53 change-resource-record-sets --hosted-zone-id $2 --change-batch file://request.json

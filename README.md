@@ -1,9 +1,15 @@
 # nomad53
 
+## Overview
+
+Register an IP address that assigned your computer to AWS Route 53.
+
 ## Usage
 
+You shoud give AWS credentials because this script uses AWS CLI.
+
 ```
-$ envchain aws-gokatei nomad53 [adapter] [Hosted zone ID] [FQDN]
+$ nomad53 [adapter] [Hosted zone ID] [FQDN]
 ```
 
 For instance,
